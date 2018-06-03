@@ -14,9 +14,11 @@ export class FormularioPrincipalComponent implements OnInit {
   nombreEquipo: string;
   liga: string;
   copas: number;
-  esCampeonActual: boolean=false;
+  esCampeonActual: boolean;
 
-  constructor() { }
+  constructor() {
+    this.esCampeonActual=false;
+  }
 
   ngOnInit() {
   }

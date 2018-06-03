@@ -11,6 +11,8 @@ export class AppComponent {
 
   equipoClick:number=0;
 
+  arregloLigas=['Europea','Sudamericana', 'Africana', 'Asiatica', 'Norteamericana'];
+
   arregloEquipos = [
     {
       nombreEquipo:"Real Madrid",
