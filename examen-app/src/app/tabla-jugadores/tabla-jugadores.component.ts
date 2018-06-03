@@ -9,7 +9,23 @@ export class TablaJugadoresComponent implements OnInit {
 
   @Input() jugadores;
 
-
+  jugador=[
+    {
+      nombre: "Hola",
+      ape: "verde",
+      d: "dd"
+    },
+    {
+      nombre: "Hola",
+      ape: "verde",
+      d: "dd"
+    },
+    {
+      nombre: "Hola",
+      ape: "verde",
+      d: "dd"
+    }
+    ];
 
   constructor() { }
 
