@@ -1,12 +1,33 @@
 <div class="row">
+
   <div class="col-sm-6">
     <app-carrusel
       [arregloEquipos]="arregloEquipos"
     ></app-carrusel>
   </div>
+
   <div class="col-sm-6">
-    <app-formulario-principal></app-formulario-principal>
+    <app-formulario-principal
+      (clickEnIngresar)="ingresarEquipo($event)"
+    ></app-formulario-principal>
   </div>
+
+  <div class="col-sm-12" style="height: 25px"></div>
+
+  <div class="col-sm-3 " *ngFor="let equipo of arregloEquipos"; let indice = "index">
+    <div class="jumbotron jumbotron-fluid" (click)="mostrarCard(index)">
+      <div class="container">
+        <h5>{{equipo.nombreEquipo}}</h5>
+        <h6>Copas: {{equipo.copas}}</h6>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-6">
+    <app-card-equipo
+      [nombreEquipo]="arregloEquipos[equipoClick].nombreEquipo" >
+
+    </app-card-equipo>
+  </div>
+
 </div>
-
-

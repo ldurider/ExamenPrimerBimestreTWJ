@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {e} from "@angular/core/src/render3";
 
 @Component({
   selector: 'app-root',
@@ -8,13 +9,15 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'app';
 
+  equipoClick:number;
+
   arregloEquipos = [
     {
       nombreEquipo:"Real Madrid",
       liga: "España",
       copas: 4,
       esCampeonActual: false,
-      jugadores: [
+      /*jugadores: [
         {
           nombreCompletoJugador: "Cristiano Ronaldo",
           numeroCamiseta: 7,
@@ -23,14 +26,14 @@ export class AppComponent {
           goles: 1,
           equipoID: "RM"
         }
-      ]
+      ]*/
     },
     {
       nombreEquipo:"Barcelona",
       liga: "España",
       copas: 3,
       esCampeonActual: false,
-      jugadores: [
+      /*jugadores: [
         {
           nombreCompletoJugador: "Lionel Messi",
           numeroCamiseta: 10,
@@ -39,9 +42,28 @@ export class AppComponent {
           goles: 10,
           equipoID: "BAR"
         }
-      ]
+      ]*/
     },
 
   ]
+
+  ingresarEquipo(evento){
+
+    this.arregloEquipos.push(
+      {
+        'nombreEquipo': evento.nombreEquipo,
+        'liga': evento.liga,
+        'copas': evento.copas,
+        'esCampeonActual' : evento.esCampeonActual
+      }
+    );
+    console.log('Evento: ', evento);
+    console.log(this.arregloEquipos);
+
+  }
+
+  mostrarCard(indice){
+    this.equipoClick=indice;
+  }
 
 }

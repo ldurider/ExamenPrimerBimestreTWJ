@@ -1,4 +1,5 @@
-import {Component, OnInit, Output} from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+
 
 @Component({
   selector: 'app-formulario-principal',
@@ -7,11 +8,12 @@ import {Component, OnInit, Output} from '@angular/core';
 })
 export class FormularioPrincipalComponent implements OnInit {
 
-  @Output() arrayEquiposOutput;
+  @Output() clickEnIngresar: EventEmitter<object> = new EventEmitter();
 
   nombreEquipo: string;
-  esCampeon: boolean = false;
-
+  liga: string;
+  copas: number;
+  esCampeonActual: boolean=false;
 
   constructor() { }
 
@@ -21,7 +23,7 @@ export class FormularioPrincipalComponent implements OnInit {
   mostrarInformacion(event, formData){
     console.log(event);
     console.log(formData.value);
-
+    this.clickEnIngresar.emit(formData.value);
 
   }
 

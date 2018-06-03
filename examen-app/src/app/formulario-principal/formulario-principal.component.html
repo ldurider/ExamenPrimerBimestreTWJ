@@ -9,18 +9,18 @@
   </mat-form-field>
 
   <mat-form-field class="example-full-width">
-    <input matInput placeholder="Liga perteneciente" name="liga">
+    <input matInput placeholder="Liga perteneciente" name="liga"[(ngModel)]="liga">
   </mat-form-field>
 
   <mat-form-field class="example-full-width">
-    <input matInput type="date" placeholder="Fecha de Creación"name="fechaCreacion">
+    <input matInput type="date" placeholder="Fecha de Creación"name="fechaCreacion"[(ngModel)]="fechaCreacion">
   </mat-form-field>
 
   <mat-form-field class="example-full-width">
-    <input matInput type="number" placeholder="Copas Internacionales"name="copas">
+    <input matInput type="number" placeholder="Copas Internacionales"name="copas" [(ngModel)]="copas">
   </mat-form-field>
 
-  <mat-slide-toggle name="esCampeon" [(ngModel)]="esCampeon">Campeón Actual</mat-slide-toggle>
+  <mat-slide-toggle name="esCampeonActual" [(ngModel)]="esCampeonActual">Campeón Actual</mat-slide-toggle>
 
 
   <br>

@@ -10,15 +10,19 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import {MatRadioModule} from '@angular/material/radio';
 
+import {CardModule} from 'primeng/card';
+
 import { AppComponent } from './app.component';
 import { CarruselComponent } from './carrusel/carrusel.component';
 import { FormularioPrincipalComponent } from './formulario-principal/formulario-principal.component';
+import { CardEquipoComponent } from './card-equipo/card-equipo.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CarruselComponent,
-    FormularioPrincipalComponent
+    FormularioPrincipalComponent,
+    CardEquipoComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +34,8 @@ import { FormularioPrincipalComponent } from './formulario-principal/formulario-
     MatInputModule,
     MatCardModule,
     MatSlideToggleModule,
-    MatRadioModule
+    MatRadioModule,
+    CardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
