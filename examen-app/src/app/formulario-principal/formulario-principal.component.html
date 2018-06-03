@@ -1,0 +1,32 @@
+
+<form class="example-form" #datosForm="ngForm" (ngSubmit)="mostrarInformacion($event, datosForm)">
+  <legend class="text-center">
+    <h4>INGRESA UN EQUIPO</h4>
+  </legend>
+
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Nombre del equipo" name="nombreEquipo" [(ngModel)]="nombreEquipo">
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Liga perteneciente" name="liga">
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <input matInput type="date" placeholder="Fecha de Creación"name="fechaCreacion">
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <input matInput type="number" placeholder="Copas Internacionales"name="copas">
+  </mat-form-field>
+
+  <mat-slide-toggle name="esCampeon" [(ngModel)]="esCampeon">Campeón Actual</mat-slide-toggle>
+
+
+  <br>
+  <br>
+  <button mat-raised-button type="reset">Limpiar</button>
+  <button mat-raised-button color="primary" type="submit">Enviar</button>
+
+</form>
+
