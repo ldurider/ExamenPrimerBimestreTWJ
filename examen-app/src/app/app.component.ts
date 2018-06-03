@@ -87,7 +87,16 @@ export class AppComponent {
         'liga': evento.liga,
         'copas': evento.copas,
         'esCampeonActual' : evento.esCampeonActual,
-        'jugadores': null
+        'jugadores': [
+          {
+            'nombreCompletoJugador': null,
+            'numeroCamiseta': null,
+            'nombreCamiseta': null,
+            'fechaIngreso': null,
+            'goles': null,
+            'equipoID': null
+          }
+        ]
       }
     );
     console.log('Evento: ', evento);
