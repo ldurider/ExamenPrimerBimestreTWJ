@@ -7,7 +7,7 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class CardEquipoComponent implements OnInit {
 
-  @Input() nombreEquipo: string;
+  @Input() nombreEquipo: string="?";
 
   constructor() { }
 

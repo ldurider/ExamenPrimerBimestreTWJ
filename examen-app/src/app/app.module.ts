@@ -11,18 +11,29 @@ import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import {MatRadioModule} from '@angular/material/radio';
 
 import {CardModule} from 'primeng/card';
+import {ButtonModule} from 'primeng/button';
+import {CalendarModule} from 'primeng/calendar';
+import {InputTextModule} from 'primeng/inputtext';
+import {TreeTableModule} from 'primeng/treetable';
+import {TreeNode} from 'primeng/api';
+
 
 import { AppComponent } from './app.component';
 import { CarruselComponent } from './carrusel/carrusel.component';
 import { FormularioPrincipalComponent } from './formulario-principal/formulario-principal.component';
 import { CardEquipoComponent } from './card-equipo/card-equipo.component';
+import { FormularioSecundarioComponent } from './formulario-secundario/formulario-secundario.component';
+import { TablaJugadoresComponent } from './tabla-jugadores/tabla-jugadores.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     CarruselComponent,
     FormularioPrincipalComponent,
-    CardEquipoComponent
+    CardEquipoComponent,
+    FormularioSecundarioComponent,
+    TablaJugadoresComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +46,12 @@ import { CardEquipoComponent } from './card-equipo/card-equipo.component';
     MatCardModule,
     MatSlideToggleModule,
     MatRadioModule,
-    CardModule
+    CardModule,
+    ButtonModule,
+    CalendarModule,
+    InputTextModule,
+    TreeTableModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

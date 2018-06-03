@@ -1,0 +1,47 @@
+<form class="ui-g " #datosForm="ngForm" (ngSubmit)="mostrarInformacion($event, datosForm)">
+  <legend class="text-center">
+    <h4>INGRESA UN JUGADOR</h4>
+  </legend>
+
+  <span class=" ui-g-12 ui-md-12 ui-float-label">
+    <input id="float-input1" type="text" size="60" name="equipoID" [(ngModel)]="equipoID" pInputText>
+    <label for="float-input1">Equipo ID</label>
+  </span>
+  <br>
+  <span class=" ui-g-12 ui-md-12 ui-float-label">
+    <input id="float-input0" type="text" size="60" name="nombreCompletoJugador" [(ngModel)]="nombreCompletoJugador" pInputText>
+    <label for="float-input0">Nombre Completo del Jugador</label>
+  </span>
+  <br>
+  <span class="ui-g-12 ui-md-12 ui-float-label">
+    <input id="float-input2" type="number" size="60" name="numeroCamiseta" [(ngModel)]="numeroCamiseta" pInputText>
+    <label for="float-input2">Número de Camiseta</label>
+  </span>
+  <br>
+  <span class=" ui-g-12 ui-md-12 ui-float-label">
+    <input id="float-input3" type="text" size="60" name="nombreCamiseta" [(ngModel)]="nombreCamiseta" pInputText>
+    <label for="float-input3">Nombre de la Camiseta</label>
+  </span>
+  <br>
+
+
+  <div class="ui-g-12 ui-md-12 ui-float-label">
+    <p-calendar  id="float-input4" [locale]="es" name="fechaIngreso" [(ngModel)]="fechaIngreso" dateFormat="dd/mm/yy"></p-calendar>
+    <label for="float-input4">Fecha de Ingreso</label>
+  </div>
+
+  <br>
+  <span class=" ui-g-12 ui-md-12 ui-float-label">
+    <input id="float-input5" type="number" size="60"  name="goles" [(ngModel)]="goles" pInputText>
+    <label for="float-input5">Goles Totales</label>
+  </span>
+
+  <br>
+
+  <br>
+  <button pButton type="reset"  label="Limpiar" class="ui-button-secondary"></button>
+  <button pButton type="submit" label="Guardar"></button>
+
+
+</form>
+

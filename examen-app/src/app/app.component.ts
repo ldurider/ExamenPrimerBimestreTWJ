@@ -9,7 +9,7 @@ import {e} from "@angular/core/src/render3";
 export class AppComponent {
   title = 'app';
 
-  equipoClick:number;
+  equipoClick:number=0;
 
   arregloEquipos = [
     {
@@ -17,7 +17,7 @@ export class AppComponent {
       liga: "España",
       copas: 4,
       esCampeonActual: false,
-      /*jugadores: [
+      jugadores: [
         {
           nombreCompletoJugador: "Cristiano Ronaldo",
           numeroCamiseta: 7,
@@ -26,14 +26,14 @@ export class AppComponent {
           goles: 1,
           equipoID: "RM"
         }
-      ]*/
+      ]
     },
     {
       nombreEquipo:"Barcelona",
       liga: "España",
       copas: 3,
       esCampeonActual: false,
-      /*jugadores: [
+      jugadores: [
         {
           nombreCompletoJugador: "Lionel Messi",
           numeroCamiseta: 10,
@@ -42,7 +42,39 @@ export class AppComponent {
           goles: 10,
           equipoID: "BAR"
         }
-      ]*/
+      ]
+    },
+    {
+      nombreEquipo:"Barcelona",
+      liga: "España",
+      copas: 3,
+      esCampeonActual: false,
+      jugadores: [
+        {
+          nombreCompletoJugador: "Lionel Messi",
+          numeroCamiseta: 10,
+          nombreCamiseta: "Messi",
+          fechaIngreso: 30/12/2000,
+          goles: 10,
+          equipoID: "BAR"
+        }
+      ]
+    },
+    {
+      nombreEquipo:"Barcelona",
+      liga: "España",
+      copas: 3,
+      esCampeonActual: false,
+      jugadores: [
+        {
+          nombreCompletoJugador: "Lionel Messi",
+          numeroCamiseta: 10,
+          nombreCamiseta: "Messi",
+          fechaIngreso: 30/12/2000,
+          goles: 10,
+          equipoID: "BAR"
+        }
+      ]
     },
 
   ]
@@ -54,7 +86,8 @@ export class AppComponent {
         'nombreEquipo': evento.nombreEquipo,
         'liga': evento.liga,
         'copas': evento.copas,
-        'esCampeonActual' : evento.esCampeonActual
+        'esCampeonActual' : evento.esCampeonActual,
+        'jugadores': null
       }
     );
     console.log('Evento: ', evento);
@@ -66,4 +99,21 @@ export class AppComponent {
     this.equipoClick=indice;
   }
 
+  ingresarJugador(evento){
+
+    this.arregloEquipos[this.equipoClick].jugadores.push(
+      {
+        'nombreCompletoJugador': evento.nombreCompletoJugador,
+        'numeroCamiseta': evento.numeroCamiseta,
+        'nombreCamiseta': evento.nombreCamiseta,
+        'fechaIngreso': evento.fechaIngreso,
+        'goles': evento.goles,
+        'equipoID': evento.equipoID
+
+      }
+    );
+    console.log('Evento: ', evento);
+    console.log(this.arregloEquipos[this.equipoClick].jugadores);
+
+  }
 }
