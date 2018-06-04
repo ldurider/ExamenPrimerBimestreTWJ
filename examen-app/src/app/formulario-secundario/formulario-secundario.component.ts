@@ -58,12 +58,36 @@ export class FormularioSecundarioComponent implements OnInit {
   ngOnInit() {
   }
 
+  esNulos(){
+    if(
+    this.nombreCompletoJugador==null||
+    this.numeroCamiseta==null||
+    this.nombreCamiseta==null||
+    this.fechaIngreso==null||
+    this.posicion==null||
+    this.goles==null){
+      return true
+    }else{
+      return false
+    }
+  }
+
   mostrarInformacion(event, formData){
 
     console.log(event);
     console.log(formData.value);
+    if(this.esNulos()==false){
     this.clickEnIngresar.emit(formData.value);
+    this.resetForm();}
+    else{
+      alert("¡Llene todo los campos del Jugador!")
+    }
 
+  }
 
+  resetForm() {
+
+    var resetForm = <HTMLFormElement>document.getElementById('form2');
+    resetForm.reset();
   }
 }
