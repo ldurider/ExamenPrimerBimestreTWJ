@@ -17,6 +17,8 @@ import {CalendarModule} from 'primeng/calendar';
 import {InputTextModule} from 'primeng/inputtext';
 import {FieldsetModule} from 'primeng/fieldset';
 import {ListboxModule} from 'primeng/listbox';
+import {PanelModule} from 'primeng/panel';
+import {DropdownModule} from 'primeng/dropdown';
 
 import { AppComponent } from './app.component';
 import { CarruselComponent } from './carrusel/carrusel.component';
@@ -52,7 +54,9 @@ import { TablaJugadoresComponent } from './tabla-jugadores/tabla-jugadores.compo
     InputTextModule,
     MatSelectModule,
     FieldsetModule,
-    ListboxModule
+    ListboxModule,
+    PanelModule,
+    DropdownModule
 
   ],
   providers: [],

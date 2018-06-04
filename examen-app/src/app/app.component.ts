@@ -6,13 +6,15 @@ import {e} from "@angular/core/src/render3";
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
+
 export class AppComponent {
   title = 'app';
 
   equipoClick:number=0;
 
   arregloLigas=['Europea','Sudamericana', 'Africana', 'Asiatica', 'Norteamericana'];
-  arregloPosicion=['Delantero','Defensa', 'Medio', 'Arquero'];
+  //arregloPosicion=['Delantero','Defensa', 'Medio', 'Arquero'];
 
   arregloEquipos = [
     {
@@ -121,7 +123,7 @@ export class AppComponent {
         'liga': evento.liga,
         'copas': evento.copas,
         'esCampeonActual' : evento.esCampeonActual,
-        'jugadores': null
+        'jugadores': []
       }
     );
     console.log('Evento: ', evento);

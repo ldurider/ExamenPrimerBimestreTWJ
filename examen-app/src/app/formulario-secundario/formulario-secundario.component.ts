@@ -10,9 +10,10 @@ export class FormularioSecundarioComponent implements OnInit {
 
   @Output() clickEnIngresar: EventEmitter<object> = new EventEmitter();
   @Input() idEquipo: number;
-  @Input() posiciones: Array<string>;
+  //@Input() posiciones;
 
-  selectedPos: string;
+  pos: SelectItem[];
+
 
   nombreCompletoJugador: string;
   numeroCamiseta: number;
@@ -33,6 +34,7 @@ export class FormularioSecundarioComponent implements OnInit {
   ];*/
 
   constructor() {
+
     this.es = {
       firstDayOfWeek: 1,
       dayNames: [ "domingo","lunes","martes","miércoles","jueves","viernes","sábado" ],
@@ -44,6 +46,13 @@ export class FormularioSecundarioComponent implements OnInit {
       clear: 'Borrar'
     };
 
+    this.pos = [];
+    this.pos.push({label:'Seleccione Posicion', value:''});
+    this.pos.push({label:'Delantero', value:'Delantero'});
+    this.pos.push({label:'Defensa', value:'Defensa'});
+    this.pos.push({label: 'Arquero', value:'Arquero'});
+    this.pos.push({label: 'Medio', value:'Medio'});
+
   }
 
   ngOnInit() {
@@ -51,9 +60,9 @@ export class FormularioSecundarioComponent implements OnInit {
 
   mostrarInformacion(event, formData){
 
-      console.log(event);
-      console.log(formData.value);
-      this.clickEnIngresar.emit(formData.value);
+    console.log(event);
+    console.log(formData.value);
+    this.clickEnIngresar.emit(formData.value);
 
 
   }

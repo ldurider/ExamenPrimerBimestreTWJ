@@ -1,78 +1,78 @@
 <p-fieldset legend="Ingrese un Jugador">
-<form class="ui-g " #datosForm="ngForm" (ngSubmit)="mostrarInformacion($event, datosForm)">
-<div class="row">
+  <form class="ui-g " #datosForm="ngForm" (ngSubmit)="mostrarInformacion($event, datosForm)">
+    <div class="row">
 
-  <div class="col-sm-4"><p>Equipo ID:</p></div>
-  <div class="col-sm-8">
-    <div class="ui-float-label">
-      <input id="float-input0" type="text"  name="equipoID" [(ngModel)]="equipoID"  (value)="idEquipo" disabled="disabled" pInputText>
-      <label for="float-input0">000{{idEquipo}}</label>
-    </div>
-  </div>
-  <br>
+      <div class="col-sm-4"><p>Equipo ID:</p></div>
+      <div class="col-sm-8">
+        <div class="ui-float-label">
+          <input id="float-input0" type="text"  required  name="equipoID" [(ngModel)]="equipoID"  (value)="idEquipo" disabled="disabled" pInputText>
+          <label for="float-input0">000{{idEquipo}}</label>
+        </div>
+      </div>
+      <br>
 
-  <div class="col-sm-4"><p>Nombre Completo del Jugador:</p></div>
-  <div class="col-sm-8">
-    <div class="ui-float-label">
-      <input id="float-input1" type="text" size="40" name="nombreCompletoJugador" [(ngModel)]="nombreCompletoJugador" pInputText>
-      <label for="float-input1"> Nombre Completo del Jugador</label>
-    </div>
-  </div>
-  <br>
+      <div class="col-sm-4"><p>Nombre Completo del Jugador:</p></div>
+      <div class="col-sm-8">
+        <div class="ui-float-label">
+          <input id="float-input1" type="text"  required size="40" name="nombreCompletoJugador" [(ngModel)]="nombreCompletoJugador" pInputText>
+          <label for="float-input1"> Nombre Completo del Jugador</label>
+        </div>
+      </div>
+      <br>
 
-  <div class="col-sm-4"><p>Número de Camiseta:</p></div>
-  <div class="col-sm-8">
+      <div class="col-sm-4"><p>Número de Camiseta:</p></div>
+      <div class="col-sm-8">
     <span class="ui-float-label">
-      <input id="float-input2" type="number" name="numeroCamiseta" [(ngModel)]="numeroCamiseta" pInputText>
+      <input id="float-input2" type="number"  required name="numeroCamiseta" [(ngModel)]="numeroCamiseta" pInputText>
       <label for="float-input2"> Número de Camiseta</label>
     </span>
-  </div>
-  <br>
+      </div>
+      <br>
 
-  <div class="col-sm-4"><p>Nombre en Camiseta:</p></div>
-  <div class="col-sm-8">
+      <div class="col-sm-4"><p>Nombre en Camiseta:</p></div>
+      <div class="col-sm-8">
     <span class="ui-float-label">
-      <input id="float-input3" type="text" name="nombreCamiseta" [(ngModel)]="nombreCamiseta" pInputText>
+      <input id="float-input3" type="text"  required name="nombreCamiseta" [(ngModel)]="nombreCamiseta" pInputText>
       <label for="float-input3"> Nombre en Camiseta</label>
     </span>
-  </div>
-  <br>
+      </div>
+      <br>
 
-  <div class="col-sm-4"><p>Posición:</p></div>
-  <div class="col-sm-8">
+      <div class="col-sm-4"><p>Posición:</p></div>
+      <div class="col-sm-8">
     <span class="ui-float-label">
-      <input id="float-input4" type="text" name="posicion" [(ngModel)]="posicion"  pInputText>
-      <label for="float-input4"> posicion</label>
+      <p-dropdown [options]="pos" [autoWidth]="false" name="posicion" [(ngModel)]="posicion"></p-dropdown>
     </span>
-  </div>
-  <br>
+      </div>
+      <br>
 
-  <!--<p-listbox [options]="pos" [(ngModel)]="selectedPos" optionLabel="label"></p-listbox>-->
+      <!--<p-listbox [options]="pos" [(ngModel)]="selectedPos" optionLabel="label"></p-listbox>-->
 
-  <div class="col-sm-4"><p>Fecha de Ingreso:</p></div>
-  <div class="col-sm-8">
-    <div class="ui-float-label">
-      <p-calendar  id="float-input5" [locale]="es" name="fechaIngreso" [(ngModel)]="fechaIngreso" dateFormat="dd/mm/yy"></p-calendar>
-      <label for="float-input5">Fecha de Ingreso</label>
-    </div>
-  </div>
-  <br>
+      <div class="col-sm-4"><p>Fecha de Ingreso:</p></div>
+      <div class="col-sm-8">
+        <div class="ui-float-label">
+          <p-calendar  id="float-input5" [locale]="es" required  name="fechaIngreso" [(ngModel)]="fechaIngreso" dateFormat="dd/mm/yy"></p-calendar>
+          <label for="float-input5">Fecha de Ingreso</label>
+        </div>
+      </div>
+      <br>
 
-  <div class="col-sm-4"><p>Goles Totales:</p></div>
-  <div class="col-sm-8">
+      <div class="col-sm-4"><p>Goles Totales:</p></div>
+      <div class="col-sm-8">
     <span class="ui-float-label">
-      <input id="float-input6" type="number"  name="goles" [(ngModel)]="goles" pInputText>
+      <input id="float-input6" type="number"  required name="goles" [(ngModel)]="goles" pInputText>
       <label for="float-input6">Goles Totales</label>
     </span>
-  </div>
+      </div>
 
-  <br>
-  <div class="col-sm-12" style="height: 25px"><p></p></div>
-  <div class="col-sm-4"><p></p></div>
-  <button pButton type="reset"  label="Limpiar" class="ui-button-secondary"></button>
-  <button pButton type="submit" label="Guardar"></button>
+      <br>
+      <div class="col-sm-12" style="height: 25px"><p></p></div>
+      <div class="col-sm-4"><p></p></div>
+      <button pButton type="reset"  label="Limpiar" class="ui-button-secondary"></button>
+      <button pButton type="submit" label="Guardar"></button>
 
-</div>
-</form>
+    </div>
+  </form>
 </p-fieldset>
+
 

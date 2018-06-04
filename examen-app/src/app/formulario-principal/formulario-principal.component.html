@@ -5,11 +5,11 @@
   </legend>
 
   <mat-form-field class="example-full-width">
-    <input matInput placeholder="Nombre del equipo" name="nombreEquipo" [(ngModel)]="nombreEquipo">
+    <input matInput placeholder="Nombre del equipo" name="nombreEquipo" required [(ngModel)]="nombreEquipo">
   </mat-form-field>
 
   <mat-form-field class="example-full-width">
-    <mat-select placeholder="Liga perteneciente" name="liga" [(ngModel)]="liga">
+    <mat-select placeholder="Liga perteneciente" name="liga" required  [(ngModel)]="liga">
       <mat-option *ngFor="let liga of arregloLigas" [value]="liga">
         {{ liga }}
       </mat-option>
@@ -19,14 +19,14 @@
 
 
   <mat-form-field class="example-full-width">
-    <input matInput type="date" placeholder="Fecha de Creación"name="fechaCreacion"[(ngModel)]="fechaCreacion">
+    <input matInput type="date" placeholder="Fecha de Creación"name="fechaCreacion" required [(ngModel)]="fechaCreacion">
   </mat-form-field>
 
   <mat-form-field class="example-full-width">
-    <input matInput type="number" placeholder="Copas Internacionales"name="copas" [(ngModel)]="copas">
+    <input matInput type="number" placeholder="Copas Internacionales"name="copas" required [(ngModel)]="copas">
   </mat-form-field>
 
-  <mat-slide-toggle name="esCampeonActual" [(ngModel)]="esCampeonActual">Campeón Actual</mat-slide-toggle>
+  <mat-slide-toggle name="esCampeonActual" required  [(ngModel)]="esCampeonActual">Campeón Actual</mat-slide-toggle>
 
 
   <br>
