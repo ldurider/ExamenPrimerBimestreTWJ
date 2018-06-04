@@ -1,4 +1,5 @@
 import {Component, Input, OnInit, Output} from '@angular/core';
+import {SelectItem} from "primeng/api";
 
 @Component({
   selector: 'app-tabla-jugadores',
@@ -9,25 +10,10 @@ export class TablaJugadoresComponent implements OnInit {
 
   @Input() jugadores;
 
-  jugador=[
-    {
-      nombre: "Hola",
-      ape: "verde",
-      d: "dd"
-    },
-    {
-      nombre: "Hola",
-      ape: "verde",
-      d: "dd"
-    },
-    {
-      nombre: "Hola",
-      ape: "verde",
-      d: "dd"
-    }
-    ];
 
-  constructor() { }
+  constructor() {
+
+  }
 
   ngOnInit() {
   }

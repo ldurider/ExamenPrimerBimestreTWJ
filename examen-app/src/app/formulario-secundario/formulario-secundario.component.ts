@@ -1,4 +1,5 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {SelectItem} from "primeng/api";
 
 @Component({
   selector: 'app-formulario-secundario',
@@ -9,16 +10,27 @@ export class FormularioSecundarioComponent implements OnInit {
 
   @Output() clickEnIngresar: EventEmitter<object> = new EventEmitter();
   @Input() idEquipo: number;
-  @Input() posiciones;
+  @Input() posiciones: Array<string>;
+
+  selectedPos: string;
 
   nombreCompletoJugador: string;
   numeroCamiseta: number;
   nombreCamiseta: string;
   fechaIngreso: string;
+  posicion: string
   goles: number;
   equipoID: string;
 
   es: any;
+
+  /*pos =[
+    {label:this.posiciones[1], value:'New York'},
+    {label:'Rome', value:'New Yosrkd'},
+    {label:'London', value:'New Yorkd'},
+    {label:'Istanbul', value:'New Yordk'},
+    {label:'Paris', value:'New Ydork'}
+  ];*/
 
   constructor() {
     this.es = {
@@ -30,7 +42,8 @@ export class FormularioSecundarioComponent implements OnInit {
       monthNamesShort: [ "ene","feb","mar","abr","may","jun","jul","ago","sep","oct","nov","dic" ],
       today: 'Hoy',
       clear: 'Borrar'
-    }
+    };
+
   }
 
   ngOnInit() {
