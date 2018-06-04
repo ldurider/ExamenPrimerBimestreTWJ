@@ -18,7 +18,7 @@ export class AppComponent {
     {
       nombreEquipo:'Real Madrid',
       idEquipo: 1,
-      fechaCreacion: 22/11/1990,
+      fechaCreacion: new Date(1988, 3, 15),
       liga: 'Europea',
       copas: 5,
       esCampeonActual: true,
@@ -28,7 +28,7 @@ export class AppComponent {
           numeroCamiseta: 7,
           nombreCamiseta: 'Ronaldo',
           posicion: 'Delantero',
-          fechaIngreso: 20/11/2000,
+          fechaIngreso: new Date(2000, 5, 20),
           goles: 12,
           equipoID: 1
         },
@@ -37,7 +37,7 @@ export class AppComponent {
           numeroCamiseta: 2,
           nombreCamiseta: 'Ramos',
           posicion: 'Defensa',
-          fechaIngreso: 20/11/2007,
+          fechaIngreso: new Date(2007, 5, 20),
           goles: 5,
           equipoID: 1
         }
@@ -46,7 +46,7 @@ export class AppComponent {
     {
       nombreEquipo:'Barcelona FC',
       idEquipo: 2,
-      fechaCreacion: 22/11/1998,
+      fechaCreacion: new Date(1998, 3, 15),
       liga: 'Europea',
       copas: 10,
       esCampeonActual: false,
@@ -56,7 +56,7 @@ export class AppComponent {
           numeroCamiseta: 10,
           nombreCamiseta: 'Messi',
           posicion: 'Delantero',
-          fechaIngreso: 20/11/2001,
+          fechaIngreso: new Date(2001, 5, 20),
           goles: 20,
           equipoID: 2
         },
@@ -65,7 +65,7 @@ export class AppComponent {
           numeroCamiseta: 6,
           nombreCamiseta: 'Suarez',
           posicion: 'Delantero',
-          fechaIngreso: 20/11/2017,
+          fechaIngreso: new Date(2012, 5, 20),
           goles: 5,
           equipoID: 2
         }
@@ -74,7 +74,7 @@ export class AppComponent {
     {
       nombreEquipo:'Boca Juniors',
       idEquipo: 3,
-      fechaCreacion: 22/11/1997,
+      fechaCreacion: new Date(1970, 3, 15),
       liga: 'Sudamericana',
       copas: 3,
       esCampeonActual: false,
@@ -84,7 +84,7 @@ export class AppComponent {
           numeroCamiseta: 10,
           nombreCamiseta: 'Tevez',
           posicion: 'Delantero',
-          fechaIngreso: 20/11/2010,
+          fechaIngreso: new Date(2010, 5, 20),
           goles: 15,
           equipoID: 3
         }
@@ -93,7 +93,7 @@ export class AppComponent {
     {
       nombreEquipo:'River Plate',
       idEquipo: 4,
-      fechaCreacion: 22/11/1980,
+      fechaCreacion: new Date(1955, 3, 15),
       liga: 'Sudamericana',
       copas: 6,
       esCampeonActual: true,
@@ -103,7 +103,7 @@ export class AppComponent {
           numeroCamiseta: 15,
           nombreCamiseta: 'Mora',
           posicion: 'Medio',
-          fechaIngreso: 20/11/2011,
+          fechaIngreso: new Date(2000, 5, 20),
           goles: 19,
           equipoID: 4
         }
