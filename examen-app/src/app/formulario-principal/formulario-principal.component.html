@@ -9,8 +9,14 @@
   </mat-form-field>
 
   <mat-form-field class="example-full-width">
-    <input matInput placeholder="Liga perteneciente" name="liga"[(ngModel)]="liga">
+    <mat-select placeholder="Liga perteneciente" name="liga" [(ngModel)]="liga">
+      <mat-option *ngFor="let liga of arregloLigas" [value]="liga">
+        {{ liga }}
+      </mat-option>
+    </mat-select>
   </mat-form-field>
+
+
 
   <mat-form-field class="example-full-width">
     <input matInput type="date" placeholder="Fecha de Creación"name="fechaCreacion"[(ngModel)]="fechaCreacion">

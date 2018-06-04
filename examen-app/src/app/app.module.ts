@@ -9,13 +9,14 @@ import {MatCardModule} from '@angular/material/card';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import {MatRadioModule} from '@angular/material/radio';
+import {MatSelectModule} from '@angular/material/select';
 
 import {CardModule} from 'primeng/card';
 import {ButtonModule} from 'primeng/button';
 import {CalendarModule} from 'primeng/calendar';
 import {InputTextModule} from 'primeng/inputtext';
-import {TreeTableModule} from 'primeng/treetable';
-import {TreeNode} from 'primeng/api';
+
+
 
 
 import { AppComponent } from './app.component';
@@ -50,7 +51,7 @@ import { TablaJugadoresComponent } from './tabla-jugadores/tabla-jugadores.compo
     ButtonModule,
     CalendarModule,
     InputTextModule,
-    TreeTableModule,
+    MatSelectModule
 
   ],
   providers: [],

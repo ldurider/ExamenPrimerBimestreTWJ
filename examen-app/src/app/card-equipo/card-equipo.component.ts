@@ -7,11 +7,19 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class CardEquipoComponent implements OnInit {
 
-  @Input() nombreEquipo: string="?";
+  @Input() equipo;
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  transformarSiNo(estado){
+    if(estado==true){
+      return "SI"
+    }else{
+      return "NO"
+    }
   }
 
 }

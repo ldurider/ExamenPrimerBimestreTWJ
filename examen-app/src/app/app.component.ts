@@ -12,80 +12,112 @@ export class AppComponent {
   equipoClick:number=0;
 
   arregloLigas=['Europea','Sudamericana', 'Africana', 'Asiatica', 'Norteamericana'];
+  arregloPosicion=['Delantero','Defensa', 'Medio', 'Arquero'];
 
   arregloEquipos = [
     {
-      nombreEquipo:"Real Madrid",
-      liga: "España",
-      copas: 4,
-      esCampeonActual: false,
+      nombreEquipo:'Real Madrid',
+      idEquipo: 1,
+      fechaCreacion: 22/11/1990,
+      liga: 'Europea',
+      copas: 5,
+      esCampeonActual: true,
       jugadores: [
         {
-          nombreCompletoJugador: "Cristiano Ronaldo",
+          nombreCompletoJugador: 'Cristiano Ronaldo',
           numeroCamiseta: 7,
-          nombreCamiseta: "Ronaldo",
+          nombreCamiseta: 'Ronaldo',
+          posicion: 'Delantero',
           fechaIngreso: 20/11/2000,
-          goles: 1,
-          equipoID: "RM"
+          goles: 12,
+          equipoID: 1
+        },
+        {
+          nombreCompletoJugador: 'Sergio Ramos',
+          numeroCamiseta: 2,
+          nombreCamiseta: 'Ramos',
+          posicion: 'Defensa',
+          fechaIngreso: 20/11/2007,
+          goles: 5,
+          equipoID: 1
         }
       ]
     },
     {
-      nombreEquipo:"Barcelona",
-      liga: "España",
-      copas: 3,
+      nombreEquipo:'Barcelona FC',
+      idEquipo: 2,
+      fechaCreacion: 22/11/1998,
+      liga: 'Europea',
+      copas: 10,
       esCampeonActual: false,
       jugadores: [
         {
-          nombreCompletoJugador: "Lionel Messi",
+          nombreCompletoJugador: 'Lionel Messi',
           numeroCamiseta: 10,
-          nombreCamiseta: "Messi",
-          fechaIngreso: 30/12/2000,
-          goles: 10,
-          equipoID: "BAR"
+          nombreCamiseta: 'Messi',
+          posicion: 'Delantero',
+          fechaIngreso: 20/11/2001,
+          goles: 20,
+          equipoID: 2
+        },
+        {
+          nombreCompletoJugador: 'Luis Saurez',
+          numeroCamiseta: 6,
+          nombreCamiseta: 'Suarez',
+          posicion: 'Delantero',
+          fechaIngreso: 20/11/2017,
+          goles: 5,
+          equipoID: 2
         }
       ]
     },
     {
-      nombreEquipo:"Barcelona",
-      liga: "España",
+      nombreEquipo:'Boca Juniors',
+      idEquipo: 3,
+      fechaCreacion: 22/11/1997,
+      liga: 'Sudamericana',
       copas: 3,
       esCampeonActual: false,
       jugadores: [
         {
-          nombreCompletoJugador: "Lionel Messi",
+          nombreCompletoJugador: 'Carlos Tevez',
           numeroCamiseta: 10,
-          nombreCamiseta: "Messi",
-          fechaIngreso: 30/12/2000,
-          goles: 10,
-          equipoID: "BAR"
+          nombreCamiseta: 'Tevez',
+          posicion: 'Delantero',
+          fechaIngreso: 20/11/2010,
+          goles: 15,
+          equipoID: 3
         }
       ]
     },
     {
-      nombreEquipo:"Barcelona",
-      liga: "España",
-      copas: 3,
-      esCampeonActual: false,
+      nombreEquipo:'River Plate',
+      idEquipo: 4,
+      fechaCreacion: 22/11/1980,
+      liga: 'Sudamericana',
+      copas: 6,
+      esCampeonActual: true,
       jugadores: [
         {
-          nombreCompletoJugador: "Lionel Messi",
-          numeroCamiseta: 10,
-          nombreCamiseta: "Messi",
-          fechaIngreso: 30/12/2000,
-          goles: 10,
-          equipoID: "BAR"
+          nombreCompletoJugador: 'Rodrigo Mora',
+          numeroCamiseta: 15,
+          nombreCamiseta: 'Mora',
+          posicion: 'Medio',
+          fechaIngreso: 20/11/2011,
+          goles: 19,
+          equipoID: 4
         }
       ]
-    },
+    }
 
   ]
 
   ingresarEquipo(evento){
-
     this.arregloEquipos.push(
       {
         'nombreEquipo': evento.nombreEquipo,
+        'idEquipo': evento.idEquipo,
+        'fechaCreacion': evento.fechaCreacion,
         'liga': evento.liga,
         'copas': evento.copas,
         'esCampeonActual' : evento.esCampeonActual,
@@ -109,6 +141,7 @@ export class AppComponent {
         'numeroCamiseta': evento.numeroCamiseta,
         'nombreCamiseta': evento.nombreCamiseta,
         'fechaIngreso': evento.fechaIngreso,
+        'posicion': evento.posicion,
         'goles': evento.goles,
         'equipoID': evento.equipoID
 
