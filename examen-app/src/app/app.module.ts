@@ -15,9 +15,7 @@ import {CardModule} from 'primeng/card';
 import {ButtonModule} from 'primeng/button';
 import {CalendarModule} from 'primeng/calendar';
 import {InputTextModule} from 'primeng/inputtext';
-
-
-
+import {FieldsetModule} from 'primeng/fieldset';
 
 import { AppComponent } from './app.component';
 import { CarruselComponent } from './carrusel/carrusel.component';
@@ -51,7 +49,8 @@ import { TablaJugadoresComponent } from './tabla-jugadores/tabla-jugadores.compo
     ButtonModule,
     CalendarModule,
     InputTextModule,
-    MatSelectModule
+    MatSelectModule,
+    FieldsetModule
 
   ],
   providers: [],

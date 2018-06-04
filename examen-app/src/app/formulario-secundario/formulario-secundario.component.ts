@@ -1,4 +1,4 @@
-import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 
 @Component({
   selector: 'app-formulario-secundario',
@@ -8,6 +8,8 @@ import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 export class FormularioSecundarioComponent implements OnInit {
 
   @Output() clickEnIngresar: EventEmitter<object> = new EventEmitter();
+  @Input() idEquipo: number;
+  @Input() posiciones;
 
   nombreCompletoJugador: string;
   numeroCamiseta: number;

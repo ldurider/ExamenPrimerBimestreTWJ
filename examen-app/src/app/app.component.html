@@ -33,6 +33,8 @@
   <div class="col-sm-6">
     <app-formulario-secundario
       (clickEnIngresar)="ingresarJugador($event)"
+      [idEquipo]="equipoClick+1"
+      [posiciones]="arregloPosicion"
     ></app-formulario-secundario>
   </div>
 
@@ -42,7 +44,10 @@
     ></app-card-equipo>
   </div>
 
+  <div class="col-sm-12" style="height: 25px"></div>
+
   <div class="col-sm-12">
+    <h3>Jugadores:</h3>
     <app-tabla-jugadores
       [jugadores]="arregloEquipos[equipoClick].jugadores"
     ></app-tabla-jugadores>
